@@ -1,9 +1,10 @@
-import { useQuiz } from "../contexts/QuizContext";
+import { useQuiz } from "../../../src/contexts/QuizContext";
 import Options from "./Options";
 import Timer from "./Timer";
 
-const Question = ({ question }) => {
-	const { dispatch, answer, index, numQuestions, secondsRemaining } = useQuiz();
+const Question = () => {
+	const { dispatch, question, answer, index, numQuestions, secondsRemaining } =
+		useQuiz();
 	return (
 		<>
 			<h4>{question?.question}</h4>
